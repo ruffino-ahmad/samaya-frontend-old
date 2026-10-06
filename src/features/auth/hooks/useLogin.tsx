@@ -1,12 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { RegisterFormValues } from "../schemas/register.schema";
-import authService from "@/services/auth.service";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import { LoginFormValues, loginSchema } from "../schemas/login.schema";
-import { ca, is } from "zod/locales";
 import { signIn } from "next-auth/react";
 
 const useLogin = () => {
